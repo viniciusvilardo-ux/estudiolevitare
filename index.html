@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Levitare Pilates – Estúdio em Fortaleza</title>
+  <meta name="description" content="Levitare Pilates – Estúdio especializado em Pilates em Fortaleza. Rua Desembargador Leite Albuquerque, 1057, loja 02." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #FAF9F6;
+      --bg-alt:    #F0EBE3;
+      --border:    #E2D9CE;
+      --text:      #1C1917;
+      --text-muted:#78716C;
+      --accent:    #8C7355;
+      --accent-lt: #D6C9B7;
+      --white:     #FFFFFF;
+      --wa:        #25D366;
+      --wa-dark:   #1DAE56;
+      --shadow:    0 4px 24px rgba(28,25,23,.08);
+      --shadow-md: 0 8px 40px rgba(28,25,23,.12);
+      --radius:    16px;
+      --trans:     200ms ease;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAVBAR ─────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 32px;
+      background: rgba(250,249,246,.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow var(--trans);
+    }
+
+    nav.scrolled { box-shadow: var(--shadow); }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 88px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: .875rem;
+      font-weight: 500;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color var(--trans);
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background: var(--wa);
+      color: #fff;
+      font-size: .85rem;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background var(--trans), transform var(--trans), box-shadow var(--trans);
+    }
+
+    .nav-cta:hover {
+      background: var(--wa-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(37,211,102,.35);
+    }
+
+    .nav-cta svg { flex-shrink: 0; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: var(--trans);
+    }
+
+    /* ── HERO ───────────────────────────────────────────── */
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(216,196,175,.35) 0%, transparent 70%),
+        var(--bg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1' fill='%238C7355' opacity='.06'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--wa);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: .5; transform: scale(1.4); }
+    }
+
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -.01em;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-weight: 300;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin: 0 auto 48px;
+      letter-spacing: .01em;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: var(--wa);
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background var(--trans), transform var(--trans), box-shadow var(--trans);
+      box-shadow: 0 4px 20px rgba(37,211,102,.3);
+    }
+
+    .btn-primary:hover {
+      background: var(--wa-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37,211,102,.4);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: transparent;
+      color: var(--text);
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 50px;
+      border: 1.5px solid var(--border);
+      text-decoration: none;
+      transition: border-color var(--trans), color var(--trans), transform var(--trans);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      font-size: .72rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      opacity: .7;
+    }
+
+    .hero-scroll svg { animation: bounce 2s infinite; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(6px); }
+    }
+
+    /* ── SECTION BASE ───────────────────────────────────── */
+    section { padding: 96px 24px; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .section-title em { font-style: italic; color: var(--accent); }
+
+    .section-desc {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      max-width: 540px;
+      line-height: 1.75;
+    }
+
+    /* ── SOBRE ──────────────────────────────────────────── */
+    #sobre { background: var(--bg-alt); }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .sobre-visual {
+      position: relative;
+    }
+
+    .sobre-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 48px 40px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .sobre-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .sobre-stat strong {
+      font-family: 'Lora', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .sobre-stat span {
+      font-size: .875rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .sobre-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .sobre-content { display: flex; flex-direction: column; gap: 24px; }
+
+    .pillar {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .pillar-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+
+    .pillar-text h4 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .pillar-text p {
+      font-size: .9rem;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    /* ── MODALIDADES ────────────────────────────────────── */
+    #modalidades { background: var(--bg); }
+
+    .modalidades-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 56px;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: var(--shadow);
+      transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans);
+      cursor: default;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-lt);
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+    }
+
+    .card h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+
+    .card p {
+      font-size: .9rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      color: var(--accent);
+      align-self: flex-start;
+    }
+
+    /* ── INSTAGRAM ──────────────────────────────────────── */
+    #instagram { background: var(--bg-alt); }
+
+    .insta-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 40px;
+    }
+
+    .insta-box {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 40px;
+      box-shadow: var(--shadow);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .insta-handle {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .btn-insta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      font-size: .95rem;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: opacity var(--trans), transform var(--trans), box-shadow var(--trans);
+      box-shadow: 0 4px 20px rgba(220,39,67,.3);
+    }
+
+    .btn-insta:hover {
+      opacity: .9;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(220,39,67,.4);
+    }
+
+    /* ── LOCALIZAÇÃO ────────────────────────────────────── */
+    #localizacao { background: var(--bg); }
+
+    .local-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .local-info {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .info-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+
+    .info-text h4 {
+      font-family: 'Lora', serif;
+      font-size: .95rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .info-text p, .info-text a {
+      font-size: .95rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      text-decoration: none;
+    }
+
+    .info-text a:hover { color: var(--accent); }
+
+    .map-wrapper {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      height: 340px;
+    }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .local-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    /* ── CTA FINAL ──────────────────────────────────────── */
+    #contato {
+      background: var(--text);
+      padding: 96px 24px;
+    }
+
+    .cta-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .cta-inner .section-label { color: var(--accent-lt); }
+
+    .cta-inner .section-title { color: var(--white); }
+
+    .cta-inner p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.6);
+      font-weight: 300;
+    }
+
+    /* ── FOOTER ─────────────────────────────────────────── */
+    footer {
+      background: #111;
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-logo {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: rgba(255,255,255,.8);
+      text-decoration: none;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: .85rem;
+      color: rgba(255,255,255,.45);
+      text-decoration: none;
+      transition: color var(--trans);
+    }
+
+    .footer-links a:hover { color: rgba(255,255,255,.8); }
+
+    .footer-copy {
+      font-size: .8rem;
+      color: rgba(255,255,255,.3);
+    }
+
+    /* ── WHATSAPP FAB ───────────────────────────────────── */
+    .wa-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--wa);
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      font-size: .9rem;
+      font-weight: 600;
+      padding: 14px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 24px rgba(37,211,102,.45);
+      transition: background var(--trans), transform var(--trans), box-shadow var(--trans), max-width var(--trans);
+      overflow: hidden;
+      max-width: 220px;
+    }
+
+    .wa-fab:hover {
+      background: var(--wa-dark);
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 10px 36px rgba(37,211,102,.55);
+    }
+
+    .wa-fab svg { flex-shrink: 0; }
+
+    /* ── MOBILE NAV ─────────────────────────────────────── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(250,249,246,.97);
+      backdrop-filter: blur(16px);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      font-family: 'Lora', serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      transition: color var(--trans);
+    }
+
+    .mobile-menu a:hover { color: var(--accent); }
+
+    .mobile-close {
+      position: absolute;
+      top: 24px; right: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    /* ── FADE-IN ANIMATION ──────────────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── GALERIA ────────────────────────────────────────── */
+    #galeria { background: var(--bg); padding: 0; }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    .galeria-item {
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 2 / 3;
+      border-radius: 10px;
+    }
+
+    .galeria-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+      transition: transform .5s ease;
+    }
+
+    .galeria-item:hover img { transform: scale(1.04); }
+
+    .galeria-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(28,25,23,0);
+      transition: background var(--trans);
+    }
+
+    .galeria-item:hover::after { background: rgba(28,25,23,.1); }
+
+    /* ── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .sobre-grid { grid-template-columns: 1fr; gap: 40px; }
+      .cards-grid  { grid-template-columns: 1fr 1fr; }
+      .local-grid  { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 16px 20px; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      section { padding: 72px 20px; }
+      .cards-grid  { grid-template-columns: 1fr; }
+      .hero { padding: 100px 20px 60px; }
+      .wa-fab { bottom: 20px; right: 20px; padding: 14px 18px; }
+      .wa-fab .wa-label { display: none; }
+      .wa-fab { border-radius: 50%; width: 56px; height: 56px; padding: 0; justify-content: center; max-width: 56px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+      .galeria-grid { gap: 4px; }
+      .nav-logo img { height: 56px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <img src="logo.png" alt="Levitare Pilates" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#modalidades">Modalidades</a></li>
+      <li><a href="#instagram">Instagram</a></li>
+      <li><a href="#localizacao">Localização</a></li>
+    </ul>
+    <a href="https://wa.me/5585986440844?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Levitare%20Pilates." target="_blank" rel="noopener" class="nav-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.532 5.845L.057 23.486a.5.5 0 0 0 .614.614l5.647-1.475A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.176-1.432l-.372-.22-3.352.877.894-3.26-.242-.386A9.952 9.952 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      Fale conosco
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Fechar menu">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="#sobre"        onclick="closeMobile()">Sobre</a>
+    <a href="#galeria"      onclick="closeMobile()">Galeria</a>
+    <a href="#modalidades"  onclick="closeMobile()">Modalidades</a>
+    <a href="#instagram"    onclick="closeMobile()">Instagram</a>
+    <a href="#localizacao"  onclick="closeMobile()">Localização</a>
+    <a href="https://wa.me/5585986440844?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Levitare%20Pilates." target="_blank" rel="noopener" style="color: var(--wa);" onclick="closeMobile()">WhatsApp</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="logo.png" alt="Levitare Pilates" style="height:clamp(180px,28vw,320px);width:auto;margin-bottom:24px;position:relative;z-index:1;" />
+    <div class="hero-badge">Pilates · Fisioterapia · Bem-estar · Fortaleza</div>
+    <h1>
+      Movimento<br>que <em>eleva</em>
+    </h1>
+    <p class="hero-subtitle">
+      No Levitare, o Pilates vai além do exercício — é equilíbrio, presença e bem-estar para o seu dia a dia.
+    </p>
+    <div class="hero-actions">
+      <a href="https://wa.me/5585986440844?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Levitare%20Pilates." target="_blank" rel="noopener" class="btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.532 5.845L.057 23.486a.5.5 0 0 0 .614.614l5.647-1.475A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.176-1.432l-.372-.22-3.352.877.894-3.26-.242-.386A9.952 9.952 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Agendar aula experimental
+      </a>
+      <a href="#sobre" class="btn-secondary">
+        Conheça o estúdio
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="hero-scroll">
+      <span>Role</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria">
+    <div class="galeria-grid">
+      <div class="galeria-item">
+        <img src="foto3.jpeg" alt="Interior do estúdio Levitare Pilates" loading="lazy" />
+      </div>
+      <div class="galeria-item">
+        <img src="foto1.jpeg" alt="Aula de Pilates no Levitare" loading="lazy" />
+      </div>
+      <div class="galeria-item">
+        <img src="foto2.jpeg" alt="Instrutor e aluno no Reformer" loading="lazy" />
+      </div>
+      <div class="galeria-item">
+        <img src="foto4.jpeg" alt="Aula personalizada no Levitare Pilates" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+
+        <div class="sobre-visual fade-in">
+          <div class="sobre-card">
+            <div class="sobre-stat">
+              <strong>Levitare</strong>
+              <span>Do latim: elevar, flutuar, transcender</span>
+            </div>
+            <div class="sobre-divider"></div>
+            <div class="sobre-stat">
+              <strong>Pilates</strong>
+              <span>Método completo de consciência corporal e força</span>
+            </div>
+            <div class="sobre-divider"></div>
+            <div class="sobre-stat">
+              <strong>Fortaleza</strong>
+              <span>Rua Des. Leite Albuquerque, 1057 – loja 02</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sobre-content fade-in">
+          <div>
+            <span class="section-label">Sobre nós</span>
+            <h2 class="section-title">Um espaço pensado para <em>você</em></h2>
+            <p class="section-desc">
+              O Levitare é um estúdio de Pilates que une técnica, cuidado e acolhimento. Cada aula é uma experiência personalizada, guiada por profissionais comprometidos com o seu bem-estar.
+            </p>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:20px;">
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="pillar-text">
+                <h4>Aulas personalizadas</h4>
+                <p>Cada aluno tem seu ritmo e objetivo. Desenvolvemos o trabalho ideal para você.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </div>
+              <div class="pillar-text">
+                <h4>Horários flexíveis</h4>
+                <p>Grade de horários pensada para encaixar na rotina de cada aluno.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <div class="pillar-text">
+                <h4>Ambiente acolhedor</h4>
+                <p>Um espaço criado com cuidado para que você se sinta em casa desde o primeiro dia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALIDADES -->
+  <section id="modalidades">
+    <div class="container">
+      <div class="modalidades-header fade-in">
+        <div>
+          <span class="section-label">Modalidades</span>
+          <h2 class="section-title">O que oferecemos</h2>
+        </div>
+        <p class="section-desc" style="max-width:340px;">
+          Diferentes práticas para atender todo tipo de objetivo e nível de condicionamento.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card fade-in">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+          </div>
+          <h3>Pilates Aparelho</h3>
+          <p>Trabalho completo em equipamentos como Reformer, Cadillac e Chair, com alta precisão de movimento e personalização total.</p>
+          <span class="card-tag">Individual & Dueto</span>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Pilates Personalizado</h3>
+          <p>Atendimento individual com programa desenvolvido exclusivamente para o seu corpo, objetivo e evolução.</p>
+          <span class="card-tag">Individual</span>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Pilates Solo</h3>
+          <p>Exercícios no solo com acessórios, focados em controle, respiração e fortalecimento do core.</p>
+          <span class="card-tag">Todos os níveis</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section id="instagram">
+    <div class="container">
+      <div class="insta-inner fade-in">
+        <div>
+          <span class="section-label">Redes sociais</span>
+          <h2 class="section-title">Acompanhe o <em>Levitare</em></h2>
+          <p class="section-desc" style="margin: 0 auto;">
+            Dicas de bem-estar, novidades das aulas e a energia do nosso estúdio — tudo no Instagram.
+          </p>
+        </div>
+
+        <div class="insta-box">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" fill="url(#ig)"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff"/></svg>
+          <span class="insta-handle">@estudiolevitare</span>
+          <a href="https://instagram.com/estudiolevitare" target="_blank" rel="noopener" class="btn-insta">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+            Seguir no Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section id="localizacao">
+    <div class="container">
+      <span class="section-label fade-in">Onde estamos</span>
+      <h2 class="section-title fade-in">Venha nos <em>visitar</em></h2>
+
+      <div class="local-grid" style="margin-top:48px;">
+
+        <div class="local-info fade-in">
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="info-text">
+              <h4>Endereço</h4>
+              <p>Rua Desembargador Leite Albuquerque, 1057<br>Loja 02 – Fortaleza, CE</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.532 5.845L.057 23.486a.5.5 0 0 0 .614.614l5.647-1.475A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.176-1.432l-.372-.22-3.352.877.894-3.26-.242-.386A9.952 9.952 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            </div>
+            <div class="info-text">
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/5585986440844?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Levitare%20Pilates." target="_blank" rel="noopener">(85) 98644-0844</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.75"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.75"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/></svg>
+            </div>
+            <div class="info-text">
+              <h4>Instagram</h4>
+              <a href="https://instagram.com/estudiolevitare" target="_blank" rel="noopener">@estudiolevitare</a>
+            </div>
+          </div>
+
+          <div class="local-ctas">
+            <a href="https://wa.me/5585986440844?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Levitare%20Pilates." target="_blank" rel="noopener" class="btn-primary" style="font-size:.9rem;padding:13px 24px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.532 5.845L.057 23.486a.5.5 0 0 0 .614.614l5.647-1.475A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.176-1.432l-.372-.22-3.352.877.894-3.26-.242-.386A9.952 9.952 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              Falar pelo WhatsApp
+            </a>
+            <a href="https://maps.google.com/?q=Rua+Desembargador+Leite+Albuquerque,+1057,+Loja+02,+Fortaleza,+CE,+Brasil" target="_blank" rel="noopener" class="btn-secondary" style="font-size:.9rem;padding:13px 24px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Ver no mapa
+            </a>
+          </div>
+        </div>
+
+        <div class="map-wrapper fade-in">
+          <iframe
+            src="https://maps.google.com/maps?q=Rua+Desembargador+Leite+Albuquerque,+1057,+Fortaleza,+CE,+Brasil&output=embed&hl=pt-BR&zoom=17"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localização Levitare Pilates"
+          ></iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="contato">
+    <div class="container">
+      <div class="cta-inner fade-in">
+        <span class="section-label">Comece hoje</span>
+        <h2 class="section-title">Pronto para dar o<br>primeiro passo?</h2>
+        <p>Agende sua aula experimental e descubra como o Pilates pode transformar o seu corpo e a sua qualidade de vida.</p>
+        <a href="https://wa.me/5585986440844?text=Olá!%20Gostaria%20de%20agendar%20uma%20aula%20experimental%20no%20Levitare%20Pilates." target="_blank" rel="noopener" class="btn-primary" style="font-size:1.05rem;padding:18px 38px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.532 5.845L.057 23.486a.5.5 0 0 0 .614.614l5.647-1.475A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.176-1.432l-.372-.22-3.352.877.894-3.26-.242-.386A9.952 9.952 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="#" class="footer-logo">Levitare Pilates</a>
+      <ul class="footer-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#modalidades">Modalidades</a></li>
+        <li><a href="https://instagram.com/estudiolevitare" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://wa.me/5585986440844" target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+      <p class="footer-copy">© 2025 Levitare Pilates. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FAB -->
+  <a href="https://wa.me/5585986440844?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Levitare%20Pilates." target="_blank" rel="noopener" class="wa-fab" aria-label="Falar pelo WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.532 5.845L.057 23.486a.5.5 0 0 0 .614.614l5.647-1.475A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.176-1.432l-.372-.22-3.352.877.894-3.26-.242-.386A9.952 9.952 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    <span class="wa-label">WhatsApp</span>
+  </a>
+
+  <script>
+    // Navbar shadow on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // Mobile menu
+    const hamburger   = document.getElementById('hamburger');
+    const mobileMenu  = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+
+    hamburger.addEventListener('click',   () => mobileMenu.classList.add('open'));
+    mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+
+    function closeMobile() { mobileMenu.classList.remove('open'); }
+
+    // Fade-in on scroll
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
+      { threshold: 0.12 }
+    );
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
