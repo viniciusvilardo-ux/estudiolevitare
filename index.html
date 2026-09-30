@@ -1398,6 +1398,7 @@
     // ── Conversões do Google Ads (cliques em WhatsApp) ──
     // Preencha os rótulos quando as ações de conversão forem criadas no Google Ads.
     const ADS_ID = 'AW-18107238579';
+    const GA4_ID = 'G-DFHP0Z58D1'; // Google Analytics (tag combinada GT-WVGDVV9D)
     const ROTULOS = {
       agendar: 'Ex4ICOieqokdELORmrpD',   // "Agendar aula experimental" (principal)
       contato: '6IZ3COueqokdELORmrpD'  // "Contato WhatsApp" (secundária)
@@ -1407,7 +1408,7 @@
       if (!link || typeof gtag !== 'function') return;
       const cta = link.dataset.cta;
       const ehWhats = link.href.includes('wa.me');
-      gtag('event', ehWhats ? 'clique_whatsapp' : 'clique_' + cta, { botao: cta, send_to: ADS_ID });
+      gtag('event', ehWhats ? 'clique_whatsapp' : 'clique_' + cta, { botao: cta, send_to: GA4_ID });
       if (!ehWhats) return;
       const rotulo = cta.startsWith('agendar') ? ROTULOS.agendar : ROTULOS.contato;
       if (rotulo) gtag('event', 'conversion', { send_to: ADS_ID + '/' + rotulo });
