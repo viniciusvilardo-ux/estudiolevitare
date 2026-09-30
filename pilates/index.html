@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Tag do Google (Google Ads + Analytics, tag combinada) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18107238579"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18107238579');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pilates na Aldeota com Fisioterapeutas – Levitare Pilates</title>
+  <meta name="description" content="Pilates na Aldeota, Fortaleza, com fisioterapeutas e no máximo 3 alunos por horário. Para dores, postura, idosos, iniciantes, gestantes e pós-parto. Aula experimental gratuita." />
+  <link rel="canonical" href="https://estudiolevitare.com.br/pilates/" />
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <meta name="theme-color" content="#FAF9F6" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Levitare Pilates" />
+  <meta property="og:title" content="Pilates na Aldeota com Fisioterapeutas – Levitare" />
+  <meta property="og:description" content="No máximo 3 alunos por horário. Aula experimental gratuita." />
+  <meta property="og:url" content="https://estudiolevitare.com.br/pilates/" />
+  <meta property="og:image" content="https://estudiolevitare.com.br/og-image.jpg" />
+  <link rel="preload" as="image" href="../foto1.jpeg" fetchpriority="high" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #FAF9F6;
+      --bg-alt:    #F0EBE3;
+      --border:    #E2D9CE;
+      --text:      #1C1917;
+      --text-muted:#78716C;
+      --accent:    #8C7355;
+      --accent-lt: #D6C9B7;
+      --white:     #FFFFFF;
+      --wa:        #25D366;
+      --wa-dark:   #1DAE56;
+      --shadow:    0 4px 24px rgba(28,25,23,.08);
+      --shadow-md: 0 8px 40px rgba(28,25,23,.12);
+      --radius:    16px;
+      --trans:     200ms ease;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAVBAR ─────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 32px;
+      background: rgba(250,249,246,.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow var(--trans);
+    }
+
+    nav.scrolled { box-shadow: var(--shadow); }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 88px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: .875rem;
+      font-weight: 500;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color var(--trans);
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background: var(--wa);
+      color: #fff;
+      font-size: .85rem;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background var(--trans), transform var(--trans), box-shadow var(--trans);
+    }
+
+    .nav-cta:hover {
+      background: var(--wa-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(37,211,102,.35);
+    }
+
+    .nav-cta svg { flex-shrink: 0; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: var(--trans);
+    }
+
+    /* ── HERO ───────────────────────────────────────────── */
+    .hero {
+      min-height: 100svh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 64px;
+      padding: 140px 56px 80px;
+      max-width: 1280px;
+      margin: 0 auto;
+      background: var(--bg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      max-width: 540px;
+    }
+
+    .hero-image {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(28,25,23,.15));
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--wa);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: .5; transform: scale(1.4); }
+    }
+
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -.01em;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(.98rem, 1.4vw, 1.1rem);
+      font-weight: 300;
+      color: var(--text-muted);
+      max-width: 460px;
+      margin: 0 0 36px;
+      letter-spacing: .01em;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: var(--wa);
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background var(--trans), transform var(--trans), box-shadow var(--trans);
+      box-shadow: 0 4px 20px rgba(37,211,102,.3);
+    }
+
+    .btn-primary:hover {
+      background: var(--wa-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37,211,102,.4);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: transparent;
+      color: var(--text);
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 50px;
+      border: 1.5px solid var(--border);
+      text-decoration: none;
+      transition: border-color var(--trans), color var(--trans), transform var(--trans);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* ── SPLIT (image + text) ───────────────────────────── */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .split.reverse > .split-image { order: 2; }
+
+    .split-image {
+      aspect-ratio: 4 / 5;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .split-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .split-content { display: flex; flex-direction: column; gap: 20px; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(6px); }
+    }
+    .hero-scroll, .hero-scroll svg { display: none; }
+
+    /* ── SECTION BASE ───────────────────────────────────── */
+    section { padding: 96px 24px; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .section-title em { font-style: italic; color: var(--accent); }
+
+    .section-desc {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      max-width: 540px;
+      line-height: 1.75;
+    }
+
+    /* ── SOBRE ──────────────────────────────────────────── */
+    #sobre { background: var(--bg-alt); }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .sobre-visual {
+      position: relative;
+    }
+
+    .sobre-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 48px 40px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .sobre-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .sobre-stat strong {
+      font-family: 'Lora', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .sobre-stat span {
+      font-size: .875rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .sobre-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .sobre-content { display: flex; flex-direction: column; gap: 24px; }
+
+    .pillar {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .pillar-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+
+    .pillar-text h4 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .pillar-text p {
+      font-size: .9rem;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    /* ── MODALIDADES ────────────────────────────────────── */
+    #modalidades { background: var(--bg); }
+
+    .modalidades-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 56px;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .cards-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .cards-grid.cols-5 { grid-template-columns: repeat(5, 1fr); }
+
+    /* ── FAQ ────────────────────────────────────────────── */
+    #faq { background: var(--bg-alt); }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 4px 24px;
+      box-shadow: var(--shadow);
+      transition: border-color var(--trans), box-shadow var(--trans);
+    }
+
+    .faq-item[open] { border-color: var(--accent-lt); box-shadow: var(--shadow-md); }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 22px 0;
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::after {
+      content: '+';
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--accent);
+      transition: transform var(--trans);
+      flex-shrink: 0;
+    }
+
+    .faq-item[open] summary::after { content: '−'; }
+
+    .faq-answer {
+      padding: 0 0 22px;
+      font-size: .95rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: var(--shadow);
+      transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans);
+      cursor: default;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-lt);
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+    }
+
+    .card h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+
+    .card p {
+      font-size: .9rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      color: var(--accent);
+      align-self: flex-start;
+    }
+
+    /* ── INSTAGRAM ──────────────────────────────────────── */
+    #instagram { background: var(--bg-alt); }
+
+    .insta-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 40px;
+    }
+
+    .insta-box {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 40px;
+      box-shadow: var(--shadow);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .insta-handle {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .btn-insta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      font-size: .95rem;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: opacity var(--trans), transform var(--trans), box-shadow var(--trans);
+      box-shadow: 0 4px 20px rgba(220,39,67,.3);
+    }
+
+    .btn-insta:hover {
+      opacity: .9;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(220,39,67,.4);
+    }
+
+    /* ── LOCALIZAÇÃO ────────────────────────────────────── */
+    #localizacao { background: var(--bg); }
+
+    .local-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .local-info {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .info-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+
+    .info-text h4 {
+      font-family: 'Lora', serif;
+      font-size: .95rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .info-text p, .info-text a {
+      font-size: .95rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      text-decoration: none;
+    }
+
+    .info-text a:hover { color: var(--accent); }
+
+    .map-wrapper {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      height: 340px;
+    }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .local-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    /* ── CTA FINAL ──────────────────────────────────────── */
+    #contato {
+      position: relative;
+      background: var(--text);
+      padding: 120px 24px;
+      overflow: hidden;
+    }
+
+    #contato::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('foto4.jpeg') center/cover no-repeat;
+      opacity: .25;
+      filter: grayscale(20%);
+    }
+
+    #contato::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(28,25,23,.55), rgba(28,25,23,.85));
+    }
+
+    #contato .container { position: relative; z-index: 1; }
+
+    .cta-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .cta-inner .section-label { color: var(--accent-lt); }
+
+    .cta-inner .section-title { color: var(--white); }
+
+    .cta-inner p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.7);
+      font-weight: 300;
+    }
+
+    /* ── FOOTER ─────────────────────────────────────────── */
+    footer {
+      background: #111;
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-logo {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: rgba(255,255,255,.8);
+      text-decoration: none;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: .85rem;
+      color: rgba(255,255,255,.45);
+      text-decoration: none;
+      transition: color var(--trans);
+    }
+
+    .footer-links a:hover { color: rgba(255,255,255,.8); }
+
+    .footer-copy {
+      font-size: .8rem;
+      color: rgba(255,255,255,.3);
+    }
+
+    /* ── WHATSAPP FAB ───────────────────────────────────── */
+    .wa-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--wa);
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      font-size: .9rem;
+      font-weight: 600;
+      padding: 14px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 24px rgba(37,211,102,.45);
+      transition: background var(--trans), transform var(--trans), box-shadow var(--trans), max-width var(--trans);
+      overflow: hidden;
+      max-width: 220px;
+    }
+
+    .wa-fab:hover {
+      background: var(--wa-dark);
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 10px 36px rgba(37,211,102,.55);
+    }
+
+    .wa-fab svg { flex-shrink: 0; }
+
+    /* ── MOBILE NAV ─────────────────────────────────────── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(250,249,246,.97);
+      backdrop-filter: blur(16px);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      font-family: 'Lora', serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      transition: color var(--trans);
+    }
+
+    .mobile-menu a:hover { color: var(--accent); }
+
+    .mobile-close {
+      position: absolute;
+      top: 24px; right: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    /* ── FADE-IN ANIMATION ──────────────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .sobre-grid { grid-template-columns: 1fr; gap: 40px; }
+      .cards-grid,
+      .cards-grid.cols-4,
+      .cards-grid.cols-5 { grid-template-columns: 1fr 1fr; }
+      .local-grid  { grid-template-columns: 1fr; }
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 120px 24px 60px;
+        min-height: auto;
+      }
+      .hero-text { align-items: center; text-align: center; max-width: 100%; }
+      .hero-subtitle { margin-left: auto; margin-right: auto; }
+      .hero-actions { justify-content: center; }
+      .split { grid-template-columns: 1fr; gap: 32px; }
+      .split.reverse > .split-image { order: 0; }
+      .split-image { aspect-ratio: 4 / 3; max-height: 480px; }
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 16px 20px; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      section { padding: 72px 20px; }
+      .cards-grid  { grid-template-columns: 1fr; }
+      .hero { padding: 100px 20px 60px; }
+      .wa-fab { bottom: 20px; right: 20px; padding: 14px 18px; }
+      .wa-fab .wa-label { display: none; }
+      .wa-fab { border-radius: 50%; width: 56px; height: 56px; padding: 0; justify-content: center; max-width: 56px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+      .nav-logo img { height: 56px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+  <style>
+    .nav-logo img { height: 72px; }
+    .hero-image { aspect-ratio: 4 / 5; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 32px; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; background: var(--white); border: 1px solid var(--border); border-radius: 50px; font-size: .85rem; font-weight: 600; color: var(--text); }
+    .pill::before { content: '✓'; color: var(--accent); font-weight: 700; }
+    #diferenciais { background: var(--bg-alt); }
+    #como-funciona { background: var(--bg); }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; counter-reset: step; margin-top: 40px; }
+    .step { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); }
+    .step::before { counter-increment: step; content: counter(step); display: inline-flex; width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: #fff; font-family: 'Lora', serif; font-weight: 600; align-items: center; justify-content: center; margin-bottom: 14px; }
+    .step h3 { font-family: 'Lora', serif; font-size: 1.05rem; margin-bottom: 6px; }
+    .step p { font-size: .9rem; color: var(--text-muted); font-weight: 300; }
+    .publico { scroll-margin-top: 110px; }
+    #saude { background: var(--bg-alt); }
+    #gestantes { background: var(--bg); }
+    .publico .cards-grid { margin-top: 36px; }
+    .publico .cta-row { margin-top: 36px; }
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
+    .gallery img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); display: block; }
+    #galeria { background: var(--bg-alt); }
+    .hero-image img { object-position: center 20%; }
+    @media (max-width: 900px) { .steps { grid-template-columns: 1fr 1fr; } .pill-row { justify-content: center; } }
+    @media (max-width: 640px) {
+      .steps { grid-template-columns: 1fr; }
+      .publico .cards-grid.cols-4 { grid-template-columns: 1fr !important; }
+      .gallery { grid-template-columns: 1fr 1fr; }
+      .gallery img:last-child { display: none; }
+      .nav-logo img { height: 52px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="../" class="nav-logo"><img src="../logo-nav.png" alt="Levitare Pilates" width="249" height="176" /></a>
+    <ul class="nav-links">
+      <li><a href="#como-funciona">Como funciona</a></li>
+      <li><a href="#saude">Dores e postura</a></li>
+      <li><a href="#gestantes">Gestantes</a></li>
+      <li><a href="#faq">Dúvidas</a></li>
+      <li><a href="#localizacao">Localização</a></li>
+    </ul>
+    <a href="https://wa.me/5585986440844?text=Ol%C3%A1%21%20Encontrei%20o%20Levitare%20no%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20aulas%20de%20Pilates." target="_blank" rel="noopener" class="nav-cta" data-cta="contato_menu"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.532 5.845L.057 23.486a.5.5 0 0 0 .614.614l5.647-1.475A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.176-1.432l-.372-.22-3.352.877.894-3.26-.242-.386A9.952 9.952 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Fale conosco</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Fechar menu">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="#como-funciona" onclick="closeMobile()">Como funciona</a>
+    <a href="#saude" onclick="closeMobile()">Dores e postura</a>
+    <a href="#gestantes" onclick="closeMobile()">Gestantes</a>
+    <a href="#faq" onclick="closeMobile()">Dúvidas</a>
+    <a href="#localizacao" onclick="closeMobile()">Localização</a>
+    <a href="https://wa.me/5585986440844?text=Ol%C3%A1%21%20Encontrei%20o%20Levitare%20no%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20aulas%20de%20Pilates." target="_blank" rel="noopener" style="color: var(--wa);" onclick="closeMobile()" data-cta="contato_menu_mobile">WhatsApp</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-badge">Pilates na Aldeota · Fortaleza</div>
+      <h1>Pilates com fisioterapeutas, em turmas de <em>até 3 alunos</em></h1>
+      <p class="hero-subtitle">Atenção de perto em cada movimento, para quem quer força, postura e alívio das tensões da rotina. A primeira aula é por nossa conta.</p>
+      <div class="pill-row">
+        <span class="pill">Até 3 alunos por horário</span>
+        <span class="pill">Aulas com fisioterapeutas</span>
+        <span class="pill">Aula experimental gratuita</span>
+      </div>
+      <div class="hero-actions">
+        <a href="https://wa.me/5585986440844?text=Ol%C3%A1%21%20Encontrei%20o%20Levitare%20no%20Google%20e%20gostaria%20de%20agendar%20uma%20aula%20experimental%20gratuita%20de%20Pilates." target="_blank" rel="noopener" class="btn-primary" data-cta="agendar_topo"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.532 5.845L.057 23.486a.5.5 0 0 0 .614.614l5.647-1.475A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.176-1.432l-.372-.22-3.352.877.894-3.26-.242-.386A9.952 9.952 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Agendar aula experimental gratuita</a>
+        <a href="#como-funciona" class="btn-secondary">Como funciona</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="../foto1.jpeg" alt="Aluna em aula de Pilates no estúdio Levitare, na Aldeota" width="898" height="1600" fetchpriority="high" />
+    </div>
+  </section>
+
+  <section id="como-funciona">
+    <div class="container">
+      <span class="section-label fade-in">Como funciona</span>
+      <h2 class="section-title fade-in">Do primeiro contato à <em>sua rotina</em></h2>
+      <p class="section-desc fade-in">Sem compromisso: você conhece o estúdio e a aula antes de decidir.</p>
+      <div class="steps">
+        <div class="step fade-in"><h3>Chame no WhatsApp</h3><p>Conte um pouco sobre você e seu objetivo.</p></div>
+        <div class="step fade-in"><h3>Agende a experimental</h3><p>Escolha um horário. A aula experimental é gratuita.</p></div>
+        <div class="step fade-in"><h3>Faça a aula</h3><p>Com fisioterapeuta e no máximo 3 alunos, no seu ritmo.</p></div>
+        <div class="step fade-in"><h3>Escolha seu plano</h3><p>Planos mensais ou pacotes de aulas para rotinas flexíveis.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="saude" class="publico">
+    <div class="container">
+      <span class="section-label fade-in">Pilates para a sua necessidade</span>
+      <h2 class="section-title fade-in">Dores, postura e <em>todas as idades</em></h2>
+      <p class="section-desc fade-in">Cada aula é conduzida por fisioterapeuta, com exercícios adaptados ao seu corpo e correção próxima.</p>
+      <div class="cards-grid cols-4">
+        <div class="card fade-in">
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          <h3>Dores e tensão</h3>
+          <p>Coluna, lombar, cervical e ombros: fortalecimento e mobilidade com orientação profissional.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="5" r="2.5"/><path d="M12 7.5v6"/><path d="M8 11l4-1.5 4 1.5"/><path d="M9 21l3-7 3 7"/><path d="M9 21h6"/></svg></div>
+          <h3>Idosos</h3>
+          <p>Mais equilíbrio, força e autonomia para o dia a dia, com segurança.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <h3>Iniciantes</h3>
+          <p>Nunca fez Pilates? As aulas começam no seu ritmo e evoluem com você.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="6" r="3"/><path d="M7 21v-4a5 5 0 0 1 10 0v4"/></svg></div>
+          <h3>Crianças e adolescentes</h3>
+          <p>Postura, consciência corporal e fortalecimento em cada fase do crescimento.</p>
+        </div>
+      </div>
+      <div class="cta-row fade-in"><a href="https://wa.me/5585986440844?text=Ol%C3%A1%21%20Encontrei%20o%20Levitare%20no%20Google%20e%20gostaria%20de%20agendar%20uma%20aula%20experimental%20gratuita%20de%20Pilates.%20Tenho%20interesse%20em%20Pilates%20para%20dores/postura." target="_blank" rel="noopener" class="btn-primary" data-cta="agendar_saude"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.532 5.845L.057 23.486a.5.5 0 0 0 .614.614l5.647-1.475A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.176-1.432l-.372-.22-3.352.877.894-3.26-.242-.386A9.952 9.952 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Agendar aula experimental gratuita</a></div>
+    </div>
+  </section>
+
+  <section id="gestantes" class="publico">
+    <div class="container">
+      <span class="section-label fade-in">Gestação e pós-parto</span>
+      <h2 class="section-title fade-in">Movimento seguro para <em>cada fase</em></h2>
+      <p class="section-desc fade-in">Pilates orientado por fisioterapeutas para a gravidez e a volta aos exercícios depois do parto, sempre com liberação médica.</p>
+      <div class="cards-grid cols-4" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="card fade-in">
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="5" r="2"/><path d="M10 9c0-1 1-2 2-2s2 1 2 2v5h-1l-1 7h-2l-1-7H10z"/><circle cx="12.5" cy="13" r="2.5"/></svg></div>
+          <h3>Gestantes</h3>
+          <p>Conforto corporal, postura e fortalecimento adequados a cada trimestre.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div>
+          <h3>Pós-parto</h3>
+          <p>Retomada gradual, com foco em core, postura e bem-estar.</p>
+        </div>
+      </div>
+      <div class="cta-row fade-in"><a href="https://wa.me/5585986440844?text=Ol%C3%A1%21%20Encontrei%20o%20Levitare%20no%20Google%20e%20gostaria%20de%20agendar%20uma%20aula%20experimental%20gratuita%20de%20Pilates%20para%20gestante/p%C3%B3s-parto." target="_blank" rel="noopener" class="btn-primary" data-cta="agendar_gestantes"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.532 5.845L.057 23.486a.5.5 0 0 0 .614.614l5.647-1.475A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.176-1.432l-.372-.22-3.352.877.894-3.26-.242-.386A9.952 9.952 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Agendar aula experimental gratuita</a></div>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <div class="container">
+      <span class="section-label fade-in">O estúdio</span>
+      <h2 class="section-title fade-in">Um espaço <em>boutique</em> na Aldeota</h2>
+      <div class="gallery fade-in">
+        <img src="../foto5.jpg" alt="Aula de Pilates com bola no estúdio Levitare" loading="lazy" />
+        <img src="../foto2.jpeg" alt="Aula no estúdio Levitare Pilates" loading="lazy" />
+        <img src="../foto3.jpeg" alt="Detalhe do estúdio Levitare" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section id="localizacao">
+    <div class="container">
+      <span class="section-label fade-in">Onde estamos</span>
+      <h2 class="section-title fade-in">Perto de <em>você</em></h2>
+      <div class="local-grid" style="margin-top:48px;">
+        <div class="local-info fade-in">
+          <div class="info-item">
+            <div class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="info-text"><h4>Endereço</h4><p>Rua Desembargador Leite Albuquerque, 1057, Loja 02<br>Aldeota — em frente ao colégio Batista Santos Dumont<br>Fortaleza, CE</p></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="info-text"><h4>Horário das aulas</h4><p>Segunda a quinta: 6h às 20h<br>Sexta: 6h às 18h</p></div>
+          </div>
+          <div class="local-ctas">
+            <a href="https://wa.me/5585986440844?text=Ol%C3%A1%21%20Encontrei%20o%20Levitare%20no%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20aulas%20de%20Pilates." target="_blank" rel="noopener" class="btn-primary" data-cta="contato_localizacao" style="font-size:.9rem;padding:13px 24px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.532 5.845L.057 23.486a.5.5 0 0 0 .614.614l5.647-1.475A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.176-1.432l-.372-.22-3.352.877.894-3.26-.242-.386A9.952 9.952 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Falar pelo WhatsApp</a>
+            <a href="https://maps.google.com/?q=Rua+Desembargador+Leite+Albuquerque,+1057,+Loja+02,+Fortaleza,+CE,+Brasil" target="_blank" rel="noopener" class="btn-secondary" data-cta="mapa" style="font-size:.9rem;padding:13px 24px;">Ver no mapa</a>
+          </div>
+        </div>
+        <div class="map-wrapper fade-in">
+          <iframe src="https://maps.google.com/maps?q=Rua+Desembargador+Leite+Albuquerque,+1057,+Fortaleza,+CE,+Brasil&output=embed&hl=pt-BR&zoom=16" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização Levitare Pilates"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <span class="section-label fade-in">Dúvidas comuns</span>
+      <h2 class="section-title fade-in">Perguntas <em>frequentes</em></h2>
+      <div class="faq-list fade-in">
+        <details class="faq-item"><summary>A aula experimental é gratuita?</summary><div class="faq-answer">Sim. A primeira aula é gratuita, para você conhecer o estúdio e o método antes de escolher um plano.</div></details>
+        <details class="faq-item"><summary>Quantos alunos por aula?</summary><div class="faq-answer">No máximo 3 alunos por fisioterapeuta em cada horário, para garantir correção e atenção de perto.</div></details>
+        <details class="faq-item"><summary>Nunca fiz Pilates. Posso começar?</summary><div class="faq-answer">Sim. As aulas são adaptadas ao seu ritmo e às suas necessidades desde o primeiro dia.</div></details>
+        <details class="faq-item"><summary>Pilates ajuda em dores na coluna?</summary><div class="faq-answer">Pode ajudar no fortalecimento, na mobilidade e na consciência corporal. Em casos específicos, a avaliação profissional é essencial.</div></details>
+        <details class="faq-item"><summary>Gestantes podem fazer Pilates?</summary><div class="faq-answer">Sim, com liberação médica e orientação adequada para cada fase da gestação e do pós-parto.</div></details>
+        <details class="faq-item"><summary>Vocês aceitam Wellhub ou Namu?</summary><div class="faq-answer">Sim. Aceitamos Wellhub (Gympass) a partir do plano Gold+ e Namu. Também temos planos próprios mensais e pacotes de aulas.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container">
+      <div class="cta-inner fade-in">
+        <span class="section-label">Comece hoje</span>
+        <h2 class="section-title">Sua primeira aula<br>é por nossa conta</h2>
+        <p>Agende sua aula experimental gratuita pelo WhatsApp.</p>
+        <a href="https://wa.me/5585986440844?text=Ol%C3%A1%21%20Encontrei%20o%20Levitare%20no%20Google%20e%20gostaria%20de%20agendar%20uma%20aula%20experimental%20gratuita%20de%20Pilates." target="_blank" rel="noopener" class="btn-primary" data-cta="agendar_final" style="font-size:1.05rem;padding:18px 38px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.532 5.845L.057 23.486a.5.5 0 0 0 .614.614l5.647-1.475A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.176-1.432l-.372-.22-3.352.877.894-3.26-.242-.386A9.952 9.952 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Agendar pelo WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="../" class="footer-logo">Levitare Pilates</a>
+      <ul class="footer-links">
+        <li><a href="../">Início</a></li>
+        <li><a href="https://instagram.com/estudiolevitare" target="_blank" rel="noopener" data-cta="instagram">Instagram</a></li>
+        <li><a href="https://wa.me/5585986440844" target="_blank" rel="noopener" data-cta="contato_rodape">WhatsApp</a></li>
+        <li><a href="../privacidade.html">Privacidade</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 Levitare Pilates. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5585986440844?text=Ol%C3%A1%21%20Encontrei%20o%20Levitare%20no%20Google%20e%20gostaria%20de%20agendar%20uma%20aula%20experimental%20gratuita%20de%20Pilates." target="_blank" rel="noopener" class="wa-fab" data-cta="contato_flutuante" aria-label="Falar pelo WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.532 5.845L.057 23.486a.5.5 0 0 0 .614.614l5.647-1.475A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.176-1.432l-.372-.22-3.352.877.894-3.26-.242-.386A9.952 9.952 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    <span class="wa-label">WhatsApp</span>
+  </a>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
+    const mobileMenu = document.getElementById('mobileMenu');
+    document.getElementById('hamburger').addEventListener('click', () => mobileMenu.classList.add('open'));
+    document.getElementById('mobileClose').addEventListener('click', () => mobileMenu.classList.remove('open'));
+    function closeMobile() { mobileMenu.classList.remove('open'); }
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // ── Conversões do Google Ads + eventos do Analytics (mesma lógica da página inicial) ──
+    const ADS_ID = 'AW-18107238579';
+    const GA4_ID = 'G-DFHP0Z58D1';
+    const ROTULOS = { agendar: 'Ex4ICOieqokdELORmrpD', contato: '6IZ3COueqokdELORmrpD' };
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('a[data-cta]');
+      if (!link || typeof gtag !== 'function') return;
+      const cta = link.dataset.cta;
+      const ehWhats = link.href.includes('wa.me');
+      gtag('event', ehWhats ? 'clique_whatsapp' : 'clique_' + cta, { botao: 'pilates_' + cta, send_to: GA4_ID });
+      if (!ehWhats) return;
+      const rotulo = cta.startsWith('agendar') ? ROTULOS.agendar : ROTULOS.contato;
+      gtag('event', 'conversion', { send_to: ADS_ID + '/' + rotulo });
+    });
+  </script>
+</body>
+</html>
