@@ -297,6 +297,12 @@
       transform: translateY(-2px);
     }
 
+    .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin: -12px 0 32px; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; background: var(--white); border: 1px solid var(--border); border-radius: 50px; font-size: .85rem; font-weight: 600; color: var(--text); }
+    .pill::before { content: '✓'; color: var(--accent); font-weight: 700; }
+    @media (max-width: 900px) { .pill-row { justify-content: center; } }
+    @media (max-width: 640px) { .cards-grid.cols-3, .cards-grid.cols-4, .cards-grid.cols-5 { grid-template-columns: 1fr; } }
+
     /* ── SPLIT (image + text) ───────────────────────────── */
     .split {
       display: grid;
@@ -942,6 +948,7 @@
     #gestantes { background: var(--bg); }
     .publico .cards-grid { margin-top: 36px; }
     .publico .cta-row { margin-top: 36px; }
+    #contato::before { background-image: url('../foto4.jpeg'); }
     .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
     .gallery img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); display: block; }
     #galeria { background: var(--bg-alt); }
@@ -949,7 +956,7 @@
     @media (max-width: 900px) { .steps { grid-template-columns: 1fr 1fr; } .pill-row { justify-content: center; } }
     @media (max-width: 640px) {
       .steps { grid-template-columns: 1fr; }
-      .publico .cards-grid.cols-4 { grid-template-columns: 1fr !important; }
+      .publico .cards-grid.cols-3, .publico .cards-grid.cols-4 { grid-template-columns: 1fr !important; }
       .gallery { grid-template-columns: 1fr 1fr; }
       .gallery img:last-child { display: none; }
       .nav-logo img { height: 52px; }
@@ -987,7 +994,7 @@
     <div class="hero-text">
       <div class="hero-badge">Pilates na Aldeota · Fortaleza</div>
       <h1>Pilates com fisioterapeutas, em turmas de <em>até 3 alunos</em></h1>
-      <p class="hero-subtitle">Atenção de perto em cada movimento, para quem quer força, postura e alívio das tensões da rotina. A primeira aula é por nossa conta.</p>
+      <p class="hero-subtitle">Atenção de perto em cada movimento, para quem quer força, postura e alívio das tensões da rotina. Comece com uma aula experimental gratuita e avaliativa.</p>
       <div class="pill-row">
         <span class="pill">Até 3 alunos por horário</span>
         <span class="pill">Aulas com fisioterapeutas</span>
@@ -1007,12 +1014,12 @@
     <div class="container">
       <span class="section-label fade-in">Como funciona</span>
       <h2 class="section-title fade-in">Do primeiro contato à <em>sua rotina</em></h2>
-      <p class="section-desc fade-in">Sem compromisso: você conhece o estúdio e a aula antes de decidir.</p>
+      <p class="section-desc fade-in">Sem compromisso: você conhece o estúdio e passa por uma avaliação antes de decidir.</p>
       <div class="steps">
         <div class="step fade-in"><h3>Chame no WhatsApp</h3><p>Conte um pouco sobre você e seu objetivo.</p></div>
         <div class="step fade-in"><h3>Agende a experimental</h3><p>Escolha um horário. A aula experimental é gratuita.</p></div>
-        <div class="step fade-in"><h3>Faça a aula</h3><p>Com fisioterapeuta e no máximo 3 alunos, no seu ritmo.</p></div>
-        <div class="step fade-in"><h3>Escolha seu plano</h3><p>Planos mensais ou pacotes de aulas para rotinas flexíveis.</p></div>
+        <div class="step fade-in"><h3>Faça a aula avaliativa</h3><p>A fisioterapeuta conhece seu corpo, seu histórico e seus objetivos.</p></div>
+        <div class="step fade-in"><h3>Escolha seu plano</h3><p>Planos e pacotes de aulas que cabem na sua rotina.</p></div>
       </div>
     </div>
   </section>
@@ -1020,13 +1027,18 @@
   <section id="saude" class="publico">
     <div class="container">
       <span class="section-label fade-in">Pilates para a sua necessidade</span>
-      <h2 class="section-title fade-in">Dores, postura e <em>todas as idades</em></h2>
-      <p class="section-desc fade-in">Cada aula é conduzida por fisioterapeuta, com exercícios adaptados ao seu corpo e correção próxima.</p>
-      <div class="cards-grid cols-4">
+      <h2 class="section-title fade-in">De crianças a idosos, <em>para cada objetivo</em></h2>
+      <p class="section-desc fade-in">Cada aula é conduzida por fisioterapeuta, com exercícios adaptados ao seu corpo, à sua fase e ao seu nível.</p>
+      <div class="cards-grid cols-3">
         <div class="card fade-in">
           <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
           <h3>Dores e tensão</h3>
           <p>Coluna, lombar, cervical e ombros: fortalecimento e mobilidade com orientação profissional.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="6" r="3"/><path d="M7 21v-4a5 5 0 0 1 10 0v4"/></svg></div>
+          <h3>Crianças e adolescentes</h3>
+          <p>Postura, consciência corporal e fortalecimento em cada fase do crescimento.</p>
         </div>
         <div class="card fade-in">
           <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="5" r="2.5"/><path d="M12 7.5v6"/><path d="M8 11l4-1.5 4 1.5"/><path d="M9 21l3-7 3 7"/><path d="M9 21h6"/></svg></div>
@@ -1034,14 +1046,19 @@
           <p>Mais equilíbrio, força e autonomia para o dia a dia, com segurança.</p>
         </div>
         <div class="card fade-in">
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="5" r="2"/><path d="M10 9c0-1 1-2 2-2s2 1 2 2v5h-1l-1 7h-2l-1-7H10z"/><circle cx="12.5" cy="13" r="2.5"/></svg></div>
+          <h3>Gestantes e pós-parto</h3>
+          <p>Movimento orientado na gravidez e retomada gradual depois do parto. <a href="#gestantes" style="color:var(--accent);font-weight:600;">Saiba mais</a></p>
+        </div>
+        <div class="card fade-in">
           <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
           <h3>Iniciantes</h3>
           <p>Nunca fez Pilates? As aulas começam no seu ritmo e evoluem com você.</p>
         </div>
         <div class="card fade-in">
-          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="6" r="3"/><path d="M7 21v-4a5 5 0 0 1 10 0v4"/></svg></div>
-          <h3>Crianças e adolescentes</h3>
-          <p>Postura, consciência corporal e fortalecimento em cada fase do crescimento.</p>
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M6.5 6.5l11 11"/><path d="M21 21l-1-1"/><path d="M3 3l1 1"/><path d="M18 22l4-4"/><path d="M2 6l4-4"/><path d="M3 10l7-7"/><path d="M14 21l7-7"/></svg></div>
+          <h3>Quem treina ou já pratica</h3>
+          <p>Para quem faz academia ou já pratica Pilates: mais desafio, mobilidade e prevenção de lesões.</p>
         </div>
       </div>
       <div class="cta-row fade-in"><a href="https://wa.me/5585986440844?text=Ol%C3%A1%21%20Encontrei%20o%20Levitare%20no%20Google%20e%20gostaria%20de%20agendar%20uma%20aula%20experimental%20gratuita%20de%20Pilates.%20Tenho%20interesse%20em%20Pilates%20para%20dores/postura." target="_blank" rel="noopener" class="btn-primary" data-cta="agendar_saude"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.532 5.845L.057 23.486a.5.5 0 0 0 .614.614l5.647-1.475A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.176-1.432l-.372-.22-3.352.877.894-3.26-.242-.386A9.952 9.952 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Agendar aula experimental gratuita</a></div>
@@ -1112,12 +1129,12 @@
       <span class="section-label fade-in">Dúvidas comuns</span>
       <h2 class="section-title fade-in">Perguntas <em>frequentes</em></h2>
       <div class="faq-list fade-in">
-        <details class="faq-item"><summary>A aula experimental é gratuita?</summary><div class="faq-answer">Sim. A primeira aula é gratuita, para você conhecer o estúdio e o método antes de escolher um plano.</div></details>
+        <details class="faq-item"><summary>A aula experimental é gratuita?</summary><div class="faq-answer">Sim. A aula experimental é gratuita e avaliativa: a fisioterapeuta conhece seu histórico, avalia seu corpo e entende seus objetivos para indicar o melhor caminho. Depois, você escolhe o plano.</div></details>
         <details class="faq-item"><summary>Quantos alunos por aula?</summary><div class="faq-answer">No máximo 3 alunos por fisioterapeuta em cada horário, para garantir correção e atenção de perto.</div></details>
         <details class="faq-item"><summary>Nunca fiz Pilates. Posso começar?</summary><div class="faq-answer">Sim. As aulas são adaptadas ao seu ritmo e às suas necessidades desde o primeiro dia.</div></details>
         <details class="faq-item"><summary>Pilates ajuda em dores na coluna?</summary><div class="faq-answer">Pode ajudar no fortalecimento, na mobilidade e na consciência corporal. Em casos específicos, a avaliação profissional é essencial.</div></details>
         <details class="faq-item"><summary>Gestantes podem fazer Pilates?</summary><div class="faq-answer">Sim, com liberação médica e orientação adequada para cada fase da gestação e do pós-parto.</div></details>
-        <details class="faq-item"><summary>Vocês aceitam Wellhub ou Namu?</summary><div class="faq-answer">Sim. Aceitamos Wellhub (Gympass) a partir do plano Gold+ e Namu. Também temos planos próprios mensais e pacotes de aulas.</div></details>
+        <details class="faq-item"><summary>Vocês aceitam Wellhub ou Namu?</summary><div class="faq-answer">Sim. Aceitamos Wellhub (Gympass) a partir do plano Gold+ e Namu. Também temos planos próprios mensais, trimestrais e semestrais, além de pacotes de aulas.</div></details>
       </div>
     </div>
   </section>
@@ -1126,8 +1143,8 @@
     <div class="container">
       <div class="cta-inner fade-in">
         <span class="section-label">Comece hoje</span>
-        <h2 class="section-title">Sua primeira aula<br>é por nossa conta</h2>
-        <p>Agende sua aula experimental gratuita pelo WhatsApp.</p>
+        <h2 class="section-title">Pronto para o<br>primeiro passo?</h2>
+        <p>Agende sua aula experimental.</p>
         <a href="https://wa.me/5585986440844?text=Ol%C3%A1%21%20Encontrei%20o%20Levitare%20no%20Google%20e%20gostaria%20de%20agendar%20uma%20aula%20experimental%20gratuita%20de%20Pilates." target="_blank" rel="noopener" class="btn-primary" data-cta="agendar_final" style="font-size:1.05rem;padding:18px 38px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.532 5.845L.057 23.486a.5.5 0 0 0 .614.614l5.647-1.475A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.176-1.432l-.372-.22-3.352.877.894-3.26-.242-.386A9.952 9.952 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Agendar pelo WhatsApp</a>
       </div>
     </div>

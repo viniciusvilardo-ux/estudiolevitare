@@ -12,7 +12,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Levitare Pilates – Pilates e Fisioterapia na Aldeota, Fortaleza</title>
-  <meta name="description" content="Estúdio boutique de Pilates, fisioterapia e terapias manuais na Aldeota, Fortaleza. Turmas reduzidas com fisioterapeutas. Agende sua aula experimental pelo WhatsApp." />
+  <meta name="description" content="Estúdio boutique de Pilates, fisioterapia e terapias manuais na Aldeota, Fortaleza. No máximo 3 alunos por fisioterapeuta. Agende sua aula experimental gratuita pelo WhatsApp." />
   <link rel="canonical" href="https://estudiolevitare.com.br/" />
 
   <link rel="icon" type="image/png" href="favicon.png" />
@@ -329,6 +329,12 @@
       color: var(--accent);
       transform: translateY(-2px);
     }
+
+    .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin: -12px 0 32px; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; background: var(--white); border: 1px solid var(--border); border-radius: 50px; font-size: .85rem; font-weight: 600; color: var(--text); }
+    .pill::before { content: '✓'; color: var(--accent); font-weight: 700; }
+    @media (max-width: 900px) { .pill-row { justify-content: center; } }
+    @media (max-width: 640px) { .cards-grid.cols-3, .cards-grid.cols-4, .cards-grid.cols-5 { grid-template-columns: 1fr; } }
 
     /* ── SPLIT (image + text) ───────────────────────────── */
     .split {
@@ -1001,12 +1007,17 @@
       <div class="hero-badge">Pilates · Fisioterapia · Bem-estar</div>
       <h1>Pilates, fisioterapia e bem-estar em um estúdio <em>boutique</em> na Aldeota</h1>
       <p class="hero-subtitle">
-        Aulas personalizadas em um espaço sofisticado e acolhedor, pensado para o seu bem-estar.
+        Aulas com fisioterapeutas, no máximo 3 alunos por horário, em um espaço sofisticado e acolhedor, pensado para o seu bem-estar.
       </p>
+      <div class="pill-row">
+        <span class="pill">Até 3 alunos por horário</span>
+        <span class="pill">Aulas com fisioterapeutas</span>
+        <span class="pill">Aula experimental gratuita</span>
+      </div>
       <div class="hero-actions">
         <a href="https://wa.me/5585986440844?text=Olá!%20Gostaria%20de%20agendar%20uma%20aula%20experimental%20no%20Levitare%20Pilates." target="_blank" rel="noopener" class="btn-primary" data-cta="agendar_topo">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.532 5.845L.057 23.486a.5.5 0 0 0 .614.614l5.647-1.475A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.176-1.432l-.372-.22-3.352.877.894-3.26-.242-.386A9.952 9.952 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          Agende sua aula experimental
+          Agende sua aula experimental gratuita
         </a>
         <a href="#sobre" class="btn-secondary">
           Conheça o estúdio
@@ -1054,8 +1065,8 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
               </div>
               <div class="pillar-text">
-                <h4>Turmas reduzidas</h4>
-                <p>Mais cuidado, mais correção e mais segurança em cada movimento.</p>
+                <h4>Até 3 alunos por horário</h4>
+                <p>No máximo 3 alunos por fisioterapeuta: mais cuidado, correção e segurança em cada movimento.</p>
               </div>
             </div>
             <div class="pillar">
@@ -1089,11 +1100,11 @@
       <div class="modalidades-header fade-in">
         <div>
           <span class="section-label">Para quem é o Levitare</span>
-          <h2 class="section-title">Para diferentes fases, rotinas e <em>objetivos</em></h2>
+          <h2 class="section-title">De crianças a idosos, para cada <em>objetivo</em></h2>
         </div>
       </div>
 
-      <div class="cards-grid cols-5">
+      <div class="cards-grid cols-3">
         <div class="card fade-in">
           <div class="card-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -1101,37 +1112,40 @@
           <h3>Para quem sente dores ou tensão</h3>
           <p>Coluna, lombar, cervical, ombros e desconfortos da rotina.</p>
         </div>
-
+        <div class="card fade-in">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="6" r="3"/><path d="M7 21v-4a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Crianças e adolescentes</h3>
+          <p>Postura, consciência corporal e fortalecimento em cada fase do crescimento.</p>
+        </div>
         <div class="card fade-in">
           <div class="card-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="5" r="2.5"/><path d="M12 7.5v6"/><path d="M8 11l4-1.5 4 1.5"/><path d="M9 21l3-7 3 7"/><path d="M9 21h6"/></svg>
           </div>
-          <h3>Para idosos</h3>
+          <h3>Idosos</h3>
           <p>Mais equilíbrio, força, mobilidade e autonomia com segurança.</p>
         </div>
-
         <div class="card fade-in">
           <div class="card-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="5" r="2"/><path d="M10 9c0-1 1-2 2-2s2 1 2 2v5h-1l-1 7h-2l-1-7H10z"/><circle cx="12.5" cy="13" r="2.5"/></svg>
           </div>
-          <h3>Para gestantes</h3>
-          <p>Movimento orientado, conforto corporal e fortalecimento adequado para cada fase.</p>
+          <h3>Gestantes e pós-parto</h3>
+          <p>Movimento orientado na gravidez e retomada gradual depois do parto.</p>
         </div>
-
+        <div class="card fade-in">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Iniciantes</h3>
+          <p>Nunca fez Pilates? As aulas começam no seu ritmo e evoluem com você.</p>
+        </div>
         <div class="card fade-in">
           <div class="card-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M6.5 6.5l11 11"/><path d="M21 21l-1-1"/><path d="M3 3l1 1"/><path d="M18 22l4-4"/><path d="M2 6l4-4"/><path d="M3 10l7-7"/><path d="M14 21l7-7"/></svg>
           </div>
-          <h3>Para quem treina</h3>
-          <p>Mais consciência corporal, mobilidade e prevenção de lesões.</p>
-        </div>
-
-        <div class="card fade-in">
-          <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h3>Para quem tem rotina imprevisível</h3>
-          <p>Planos com pacotes de aulas para quem precisa de mais flexibilidade.</p>
+          <h3>Quem treina ou já pratica</h3>
+          <p>Para quem faz academia ou já pratica Pilates: mais desafio, mobilidade e prevenção de lesões.</p>
         </div>
       </div>
     </div>
@@ -1153,7 +1167,8 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
           </div>
           <h3>Pilates</h3>
-          <p>Aulas em equipamentos, com acompanhamento profissional e foco em força, mobilidade, postura e bem-estar.</p>
+          <p>Aulas em equipamentos, com no máximo 3 alunos por fisioterapeuta e foco em força, mobilidade, postura e bem-estar.</p>
+          <a href="pilates/" style="color:var(--accent);font-weight:600;text-decoration:none;">Conheça o Pilates →</a>
         </div>
 
         <div class="card fade-in">
@@ -1296,7 +1311,7 @@
           <div class="faq-list">
             <details class="faq-item">
               <summary>Nunca fiz Pilates. Posso começar?</summary>
-              <div class="faq-answer">Sim. As aulas são adaptadas ao seu ritmo e acompanhadas por uma profissional.</div>
+              <div class="faq-answer">Sim. As aulas são adaptadas ao seu ritmo e conduzidas por fisioterapeutas.</div>
             </details>
 
             <details class="faq-item">
@@ -1306,12 +1321,12 @@
 
             <details class="faq-item">
               <summary>As aulas são individuais ou em grupo?</summary>
-              <div class="faq-answer">Trabalhamos com turmas reduzidas e acompanhamento próximo, para garantir atenção e segurança.</div>
+              <div class="faq-answer">Em grupo, com no máximo 3 alunos por fisioterapeuta em cada horário, para garantir atenção e segurança.</div>
             </details>
 
             <details class="faq-item">
               <summary>Gestantes podem fazer Pilates?</summary>
-              <div class="faq-answer">Sim, com liberação médica e orientação adequada para cada fase da gestação.</div>
+              <div class="faq-answer">Sim, com liberação médica e orientação adequada para cada fase da gestação e do pós-parto.</div>
             </details>
 
             <details class="faq-item">
@@ -1322,6 +1337,21 @@
             <details class="faq-item">
               <summary>Qual o horário de funcionamento?</summary>
               <div class="faq-answer">De segunda a quinta, das 6h às 20h, e às sextas, das 6h às 18h.</div>
+            </details>
+
+            <details class="faq-item">
+              <summary>A aula experimental é gratuita?</summary>
+              <div class="faq-answer">Sim. A aula experimental é gratuita e avaliativa: a fisioterapeuta conhece seu histórico, avalia seu corpo e entende seus objetivos para indicar o melhor caminho.</div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Quais planos vocês oferecem?</summary>
+              <div class="faq-answer">Planos mensais, trimestrais e semestrais, além de pacotes de aulas para quem precisa de mais flexibilidade.</div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Vocês aceitam Wellhub ou Namu?</summary>
+              <div class="faq-answer">Sim. Aceitamos Wellhub (Gympass) a partir do plano Gold+ e Namu. Também temos planos próprios mensais, trimestrais e semestrais, além de pacotes de aulas.</div>
             </details>
 
             <details class="faq-item">
